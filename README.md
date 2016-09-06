@@ -19,9 +19,9 @@ DONE
 
 ### read CDEC v's RAM
 ```
-$ bundle exec cdecv_ramreader /dev/ttyS2
-:1000000081FF06A8FFA810FF00000000000000000C
-:1000100009000000000000000000000000000000D7
+$ bundle exec ruby cdecv_ramreader.rb /dev/ttyS2
+:10000000821381FF21E40BE80EC00442C004A8FF64
+:10001000A814FF0004000000000000000000000021
 :1000200000000000000000000000000000000000D0
 :1000300000000000000000000000000000000000C0
 :1000400000000000000000000000000000000000B0
@@ -42,7 +42,7 @@ $ bundle exec cdecv_ramreader /dev/ttyS2
 ### get more information (not implemented yet)
 
 ```
-$ bundle exec cdecv_monitor /dev/ttyS2
+$ bundle exec ruby cdecv_monitor /dev/ttyS2
 {
     "PC"    : 03,
     "A"     : 02,
