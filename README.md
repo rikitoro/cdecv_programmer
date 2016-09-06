@@ -11,7 +11,7 @@ $ bundle install
 ### program (download the hexfile onto CDEC v's RAM)
 
 ```
-$ bundle exec ruby cdec_v_programmer.rb /dev/ttyS2 hexfile_sample/bitcount_test.hex
+$ bundle exec ruby cdecv_programmer.rb /dev/ttyS2 hexfile_sample/bitcount_test.hex
 WM:10000000821381FF21E40BE80EC00442C004A8FF00
 WM:10001000A814FF0000000000000000000000000000
 DONE
@@ -19,7 +19,7 @@ DONE
 
 ### read CDEC v's RAM
 ```
-$ bundle exec cdec_v_ramreader /dev/ttyS2
+$ bundle exec cdecv_ramreader /dev/ttyS2
 :1000000081FF06A8FFA810FF00000000000000000C
 :1000100009000000000000000000000000000000D7
 :1000200000000000000000000000000000000000D0
@@ -42,7 +42,7 @@ $ bundle exec cdec_v_ramreader /dev/ttyS2
 ### get more information (not implemented yet)
 
 ```
-$ bundle exec cdec_v_monitor /dev/ttyS2
+$ bundle exec cdecv_monitor /dev/ttyS2
 {
     "PC"    : 03,
     "A"     : 02,
