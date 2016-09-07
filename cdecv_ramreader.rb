@@ -9,9 +9,9 @@ end
 commands =[]
 if (ARGV.size != 1)
   puts "usage:"
-  puts "bundle exec ruby cdec_v_ramreader.rb <port_name>"
+  puts "bundle exec ruby cdecv_ramreader.rb <port_name>"
   puts "example:"
-  puts "bundle exec ruby cdec_v_ramreader.rb /dev/ttyS2"
+  puts "bundle exec ruby cdecv_ramreader.rb /dev/ttyS2"
 
   exit()
 end
@@ -20,10 +20,10 @@ port_name = ARGV[0]
 
 SerialPort.open(
   port_name,
-  baud: 9600 #,
-  #data_bits: 8,
-  #stop_bits: 1,
-  #parity: SerialPort::NONE
+  baud: 9600 ,
+  data_bits: 8,
+  stop_bits: 1,
+  parity: SerialPort::NONE
   ) do |sp|
 
   sp.read_timeout = 100
