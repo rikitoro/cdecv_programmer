@@ -26,11 +26,10 @@ SerialPort.open(
   parity: SerialPort::NONE
   ) do |sp|
 
-  sp.read_timeout = 100
+  sp.read_timeout = 1000
   sp.gets("\r\n")
 
-  commands = [
-    "RM:100000",
+  [ "RM:100000",
     "RM:100010",
     "RM:100020",
     "RM:100030",
