@@ -9,9 +9,9 @@ end
 
 if (ARGV.size != 2)
   puts "usage:"
-  puts "bundle exec ruby cdec_v_programmer.rb <port_name> <file_name>"
+  puts "$ bundle exec ruby cdecv_programmer.rb <port_name> <file_name>"
   puts "example:"
-  puts "bundle exec ruby cdec_v_programmer.rb /dev/ttyS2 hexfile_sample/bitcount_test.hex"
+  puts "$ bundle exec ruby cdecv_programmer.rb /dev/ttyS2 hexfile_sample/bitcount_test.hex"
 
   exit()
 end
@@ -21,10 +21,10 @@ file_name = ARGV[1]
 
 SerialPort.open(
   port_name,
-  baud: 9600 #,
-  #data_bits: 8,
-  #stop_bits: 1,
-  #parity: SerialPort::NONE
+  baud: 9600,
+  data_bits: 8,
+  stop_bits: 1,
+  parity: SerialPort::NONE
   ) do |sp|
 
   sp.read_timeout = 100

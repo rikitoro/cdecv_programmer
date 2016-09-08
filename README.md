@@ -42,23 +42,7 @@ $ bundle exec ruby cdecv_ramreader.rb /dev/ttyS2
 ### get more information (not implemented yet)
 
 ```
-$ bundle exec ruby cdecv_monitor /dev/ttyS2
-{
-    "PC"    : 03,
-    "A"     : 02,
-    "B"     : 00,
-    "C"     : 1F,
-    "T"     : 02,
-    "R"     : 02,
-    "FLG"   : 02,
-    "Xbus"  : 1F,
-    "MA"    : 03,
-    "WD"    : 1F,
-    "RD"    : 00,
-    "I"     : C0,
-    "xsrc"  : 001,
-    "xdst"  : 0000000001,
-    "aluop" : 0001,
-    "cycle" : 1A2A
-}
+$ bundle exec ruby cdecv_monitor.rb /dev/ttyS2
+{"PC":"08","A":"00","B":"04","C":"00","T":"00","R":"08","FLG":"04","Xbus":"08","MA":"07","WD":"04","RD":"E8","I":"E8","xsrc":"000","xdst":"0000001010","aluop":"0111","cycle":"00DC"}
+
 ```
